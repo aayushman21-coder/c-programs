@@ -1,0 +1,33 @@
+// C program to find the sum of Geometric Progression (G.P.) series
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+
+    int n;
+
+    float a;
+    float r;
+    float i;
+    float l;
+    float s;
+
+    printf("Enter the first term: ");
+    scanf("%f", &a);
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("Enter the common ratio: ");
+    scanf("%f", &r);
+
+    l = a * pow(r, n - 1);
+    s = (a * (1 - pow(r, n + 1))) / (1 - r);
+
+    printf("Last term of G.P. series: %f", l);
+    printf("\nSum of the G.P. series  : %f\n", s);
+
+    return 0;
+}
